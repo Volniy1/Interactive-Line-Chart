@@ -1,6 +1,7 @@
 # Interactive A/B Test Conversion Rate Chart
 
-An interactive line chart application for visualizing A/B test conversion rates. Built with React, TypeScript, and Recharts.
+An interactive line chart application for visualizing A/B test conversion rates. Built with React, TypeScript, Recharts, and Mantine.
+--- you can check it out Right now on https://volniy1.github.io/Interactive-Line-Chart/
 
 # 1 - Chosen Visualization Library
 
