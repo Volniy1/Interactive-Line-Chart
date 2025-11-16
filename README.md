@@ -3,7 +3,7 @@
 An interactive line chart application for visualizing A/B test conversion rates.
 Built with React, TypeScript, Recharts, and Mantine.
 
-#### you can check it out right now on https://volniy1.github.io/Interactive-Line-Chart/
+#### You can check it out right now on https://volniy1.github.io/Interactive-Line-Chart/
 
 # 1 - Chosen Visualization Library
 
