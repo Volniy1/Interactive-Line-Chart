@@ -30,7 +30,6 @@ import s from "./Chart.module.scss";
 export default function Chart() {
   const chartData = data as ChartData;
 
-  // Memoize idToName and variationNames since they don't change
   const idToName = useMemo(
     () =>
       chartData.variations.reduce<Record<string, string>>((acc, variation) => {
@@ -40,13 +39,12 @@ export default function Chart() {
       }, {}),
     []
   );
-  const variationNames = useMemo(() => Object.values(idToName), [idToName]);
+  const variationNames = Object.values(idToName);
 
   const [variation, setVariation] = useState(variationNames[0]);
   const [timePeriod, setTimePeriod] = useState("Day");
   const [chartType, setChartType] = useState("Smooth");
 
-  // Memoize weekDayChart computation
   const weekDayChart = useMemo(
     () =>
       timePeriod === "Week"
@@ -55,11 +53,9 @@ export default function Chart() {
     [timePeriod]
   );
 
-  // Memoize allLineChartData computation
-  const allLineChartData: LineChartDataPoint[] = useMemo(
+  const allChartData: LineChartDataPoint[] = useMemo(
     () =>
       weekDayChart.map((entry) => {
-        // perenesti otd funkciu
         const row: LineChartDataPoint = { date: entry.date };
 
         Object.entries(idToName).forEach(([id, name]) => {
@@ -79,12 +75,11 @@ export default function Chart() {
     [weekDayChart, idToName]
   );
 
-  // Memoize lineChartData computation
   const lineChartData: LineChartDataPoint[] = useMemo(
     () =>
       variation === "All variations"
-        ? allLineChartData
-        : allLineChartData
+        ? allChartData
+        : allChartData
             .filter((entry) => entry[variation] !== undefined)
             .map((entry) => {
               const filteredEntry: LineChartDataPoint = { date: entry.date };
@@ -93,10 +88,9 @@ export default function Chart() {
               }
               return filteredEntry;
             }),
-    [variation, allLineChartData]
+    [variation, allChartData]
   );
 
-  // Memoize maxYValue and topReferenceLineY
   const maxYValue = useMemo(
     () =>
       Math.max(
@@ -235,7 +229,6 @@ export default function Chart() {
     let newStart = point - halfLength;
     let newEnd = point + halfLength;
 
-    // Adjust for odd interval lengths
     if (newIntervalLgth % 2 === 0) {
       newEnd = newStart + newIntervalLgth - 1;
     }

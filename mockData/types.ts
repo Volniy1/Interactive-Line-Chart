@@ -14,7 +14,6 @@ export interface ChartData {
   data: ChartDataPoint[];
 }
 
-// Final Chart type
 export interface LineChartDataPoint {
   date: string;
   [key: string]: string | number;

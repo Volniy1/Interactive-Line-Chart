@@ -11,16 +11,16 @@ const theme = createTheme({
   primaryColor: "blue",
   colors: {
     dark: [
-      "#ffffff", // dark[0] - icon-dg-color / text-primary (lightest)
-      "#c7c5d0", // dark[1] - variation-light
-      "#a1a3ff", // dark[2] - variation-lightblue
-      "#414163", // dark[3] - grid-dk
-      "#414163", // dark[4] - background-dk
-      "#000018", // dark[5] - foreground-dk
-      "#000018", // dark[6]
-      "#000027", // dark[7]
-      "#000027", // dark[8]
-      "#000027", // dark[9] - darkest
+      "#ffffff",
+      "#c7c5d0",
+      "#a1a3ff",
+      "#414163",
+      "#414163",
+      "#000018",
+      "#000018",
+      "#000027",
+      "#000027",
+      "#000027",
     ],
   },
   defaultRadius: "sm",
