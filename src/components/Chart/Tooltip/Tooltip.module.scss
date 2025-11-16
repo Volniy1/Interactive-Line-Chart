@@ -1,0 +1,14 @@
+// Dark theme tooltip text and icons
+[data-mantine-color-scheme="dark"] {
+  .tooltipText {
+    color: var(--text-primary-dk);
+  }
+
+  .tooltip {
+    .icon {
+      path {
+        fill: var(--icon-dg-color);
+      }
+    }
+  }
+}

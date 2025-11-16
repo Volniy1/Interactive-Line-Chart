@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+:root {
+  // --default-font: Righteous, sans-serif;
+
+  --app: #ffffff;
+  --background: #ffffff;
+  --foreground: #c0cad8;
+
+  --text-primary: #1b1b23;
+  --text-secondary: #918f9a;
+  --grid: #414163;
+  --border-dashed: #f1f0f5;
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  --button-secondary-border: #ebebeb;
+
+  --variation-orange: #ff8346;
+  --variation-dark: #46464f;
+  --variation-blue: #4142ef;
+  --variation-green: #35bdad;
+
+  --icon-colour: #5e5d67;
+
+  --box-shadow: 0px 0px 2px hsla(0, 0%, 60%, 0.1),
+    0px 4px 12px hsla(0, 0%, 60%, 0.3);
+
+  // dark theme colors (stored as custom variables)
+  --background-dk: #000027;
+  --foreground-dk: #000018;
+  --grid-dk: #414163;
+  --text-primary-dk: #ffffff;
+  --variation-light: #c7c5d0;
+  --variation-lightblue: #a1a3ff;
+  --icon-dg-color: #ffffff;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+
+  path {
+    fill: var(--icon-colour);
+  }
+}
+
+// Mantine dark theme overrides
+[data-mantine-color-scheme="dark"] {
+  // --mantine-color-body: var(--background-dk);
+  // --mantine-color-text: var(--text-primary-dk);
+  // --mantine-color-dimmed: var(--grid-dk);
+  // --mantine-color-default-border: var(--grid-dk);
+  // --mantine-color-default-hover: var(--foreground-dk);
+  // --mantine-color-default-color: var(--text-primary-dk);
+  // --mantine-color-default-bg: var(--foreground-dk);
+
+  // Override body and text colors
+  background-color: var(--background-dk);
+  color: var(--text-primary-dk);
+
+  // Also update custom variables for consistency
+  --text-primary: var(--text-primary-dk);
+  --background: var(--background-dk);
+  --foreground: var(--foreground-dk);
+  --grid: var(--grid-dk);
+  --app: var(--background-dk);
+  --box-shadow: none;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   :root {
+//     --background: #000027;
+//     --foreground: #000018;
+//     --grid: #3f3f62;
+
+//     --variation-light: #c7c5d0;
+//     --variation-lightblue: #a1a3ff;
+//   }
+// }

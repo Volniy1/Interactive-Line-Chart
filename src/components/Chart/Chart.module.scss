@@ -1,0 +1,43 @@
+.container {
+  box-shadow: var(--box-shadow);
+}
+
+.axis {
+  line {
+    fill: var(--text-primary) !important;
+    stroke: var(--grid);
+  }
+  text {
+    margin-top: 1px;
+  }
+}
+
+:global(.recharts-cartesian-grid) {
+  line {
+    stroke: var(--grid) !important;
+  }
+}
+
+.buttonIcon {
+  width: 16px;
+  height: 16px;
+  path {
+    stroke: var(--text-primary);
+  }
+}
+
+.chart {
+  user-select: none;
+  * {
+    outline: none;
+  }
+}
+
+.selectedPointDot {
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(65, 66, 239, 0.5));
+}
+
+.brush {
+  display: none;
+}
