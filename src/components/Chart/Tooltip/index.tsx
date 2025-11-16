@@ -3,7 +3,7 @@ import { Card, ColorSwatch, Divider, Group, Stack, Text } from "@mantine/core";
 import CalendarIcon from "@public/media/calendar.svg?react";
 import TrophyIcon from "@public/media/trophy.svg?react";
 
-import s from "./ToolTip.module.scss";
+import s from "./Tooltip.module.scss";
 
 type PayloadEntry = {
   dataKey?: string;
