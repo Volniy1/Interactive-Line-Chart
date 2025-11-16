@@ -1,14 +1,9 @@
-// Dark theme tooltip text and icons
-[data-mantine-color-scheme="dark"] {
+.tooltip {
   .tooltipText {
-    color: var(--text-primary-dk);
+    color: var(--text-primary);
   }
-
-  .tooltip {
-    .icon {
-      path {
-        fill: var(--icon-dg-color);
-      }
-    }
+  .ToolTipVariant {
+    border: 1px dashed var(--border-dashed);
+    padding: 2px;
   }
 }
